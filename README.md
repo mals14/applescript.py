@@ -23,4 +23,4 @@ $ [sudo] pip install applescript
 ```
 
 ### Sources
-+   [`applescript.run(applescript, flags=None)`](https://github.com/looking-for-a-job/applescript.py/blob/master/applescript/__init__.py)
++   [`applescript.run(applescript, flags=None, background=False)`](https://github.com/looking-for-a-job/applescript.py/blob/master/applescript/__init__.py)
