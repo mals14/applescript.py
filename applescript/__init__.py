@@ -17,9 +17,8 @@ def _flags(flags=None):
 @only.osx
 @public
 def run(applescript, flags=None, background=False):
-    if os.path.exists(applescript):
-        path = applescript
-    else:
+    path = applescript
+    if not os.path.exists(applescript):  # source code
         path = temp.tempfile()
         open(path, "w").write(applescript)
     cmd = ["osascript", path] + _flags(flags)
