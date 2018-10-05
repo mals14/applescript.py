@@ -4,22 +4,15 @@ import only
 from public import public
 import runcmd
 import temp
-
-
-def _flags(flags=None):
-    if not flags:
-        return []
-    if isinstance(flags, list):
-        return ["-s"] + flags
-    return ["-s", flags]
+import applescript.tell
 
 
 @only.osx
 @public
-def run(applescript, flags=None, background=False):
+def run(applescript, background=False):
     path = applescript
     if not os.path.exists(applescript):  # source code
         path = temp.tempfile()
         open(path, "w").write(applescript)
-    cmd = ["osascript", path] + _flags(flags)
-    return runcmd.run(cmd, background=background)
+    args = ["osascript", path]
+    return runcmd.run(args, background=background)

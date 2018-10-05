@@ -22,5 +22,8 @@ $ [sudo] pip install applescript
 ''
 ```
 
-### Sources
-+   [`applescript.run(applescript, flags=None, background=False)`](https://github.com/looking-for-a-job/applescript.py/blob/master/applescript/__init__.py)
+`tell application "appname"`
+```python
+>>> applescript.tell.app("Terminal",'do script "ls"')
+>>> applescript.tell.app("Terminal",'do script "ls"',background=True)
+```
