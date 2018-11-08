@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import only
-from public import public
+import public
 import runcmd
 import temp
 
@@ -12,9 +12,9 @@ def _tempfile(content):
 
 
 @only.osx
-@public
+@public.add
 def app(appname, applescript, background=False):
-    code = """tell application "%s"
+    code = """tell app "%s"
     %s
 end tell
 """ % (appname, applescript)

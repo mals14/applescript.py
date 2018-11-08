@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import applescript
-import tests_os.mac
+import mac_only
 
 
 applescript.tell.app("Terminal", 'do script "ls"')

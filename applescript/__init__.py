@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 import os
 import only
-from public import public
+import public
 import runcmd
 import temp
 import applescript.tell
 
 
 @only.osx
-@public
+@public.add
 def run(applescript, background=False):
     path = applescript
     if not os.path.exists(applescript):  # source code
