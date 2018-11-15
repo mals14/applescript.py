@@ -14,6 +14,7 @@ def _tempfile(content):
 @only.osx
 @public.add
 def app(appname, applescript, background=False):
+    """execute applescript `tell application "VLC" ...`"""
     code = """tell app "%s"
     %s
 end tell

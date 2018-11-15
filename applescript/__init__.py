@@ -10,6 +10,7 @@ import applescript.tell
 @only.osx
 @public.add
 def run(applescript, background=False):
+    """run applescript file or applescript code"""
     path = applescript
     if not os.path.exists(applescript):  # source code
         path = temp.tempfile()

@@ -3,12 +3,18 @@
 [![](https://img.shields.io/pypi/v/applescript.svg?maxAge=3600)](https://pypi.org/pypi/applescript/)
 [![Travis](https://api.travis-ci.org/looking-for-a-job/applescript.py.svg?branch=master)](https://travis-ci.org/looking-for-a-job/applescript.py/)
 
-### Install
+#### Install
 ```bash
 $ [sudo] pip install applescript
 ```
 
-### Examples
+#### Functions
+function|description
+-|-
+`applescript.run(applescript, background=False)`|run applescript file or applescript code
+`applescript.tell.app(appname, applescript, background=False)`|execute applescript `tell application "VLC" ...`
+
+#### Examples
 ```python
 >>> import applescript
 >>> r = applescript.run('path/to/file.applescript')
@@ -27,3 +33,5 @@ $ [sudo] pip install applescript
 >>> applescript.tell.app("Terminal",'do script "ls"')
 >>> applescript.tell.app("Terminal",'do script "ls"',background=True)
 ```
+
+<p align="center"><a href="https://pypi.org/project/readme-md/">readme-md</a> - README.md generator</p>
