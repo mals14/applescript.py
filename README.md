@@ -16,6 +16,7 @@ $ [sudo] pip install applescript
 function|`__doc__`
 -|-
 `applescript.run(applescript, background=False)` |run applescript file/string
+`applescript.tell.app(appname, applescript, background=False)` |execute applescript `tell application "VLC" ...`
 
 #### Examples
 ```python
